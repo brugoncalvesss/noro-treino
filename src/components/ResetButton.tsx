@@ -1,0 +1,1 @@
+// Botão de reset de progresso

@@ -1,0 +1,1 @@
+// Hook de uso do localStorage
