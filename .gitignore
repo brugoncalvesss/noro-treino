@@ -1,59 +1,38 @@
 # Node.js
 node_modules/
+
+# Vite
+dist/
+.vite/
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
 
-# TypeScript
-dist/
-*.tsbuildinfo
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-# Editor / Sistema operacional
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-*.DS_Store
-*.swp
-*.swo
-*.bak
-*.tmp
-
-# Configuração do ambiente
+# Env files
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*.local
 
-# Cobertura de testes
-coverage/
-.nyc_output/
+# Editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
-# ESLint / Prettier
-.eslintcache
-.prettierignore
-.prettiercache
+# MacOS
+.DS_Store
 
-# Cache do TypeScript
-.cache/
-turbo/
+# Linux
+*~
 
-# Puppeteer
-puppeteer/
-.puppeteer-chromium
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Data
-data/
+# Optional: system files
+*.log
