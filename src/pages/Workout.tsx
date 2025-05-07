@@ -35,7 +35,7 @@ export default function WorkoutPage({ workouts, setWorkouts, initialWorkouts }: 
   }
 
   return (
-    <div className="p-6 max-w-xl mx-auto">
+    <div className="p-4 sm:p-6 max-w-2xl mx-auto">
       <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
         Treino {workout.id} – {workout.title}
       </h2>
