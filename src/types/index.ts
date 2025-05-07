@@ -6,7 +6,7 @@ export interface Exercise {
 }
 
 export interface Workout {
-  id: "A" | "B" | "C" | "D";
+  id: 'A' | 'B' | 'C' | 'D';
   title: string;
   day: string;
   exercises: Exercise[];

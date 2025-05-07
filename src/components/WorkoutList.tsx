@@ -8,7 +8,7 @@ interface Props {
 export default function WorkoutList({ workouts }: Props) {
   return (
     <ul className="space-y-4">
-      {workouts.map((workout) => (
+      {workouts.map(workout => (
         <li key={workout.id}>
           <Link
             to={`/treino/${workout.id}`}

@@ -1,10 +1,7 @@
-
 import { useEffect, useState } from 'react';
 
 export function ThemeToggle() {
-  const [dark, setDark] = useState(() =>
-    document.documentElement.classList.contains('dark')
-  );
+  const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'));
 
   useEffect(() => {
     if (dark) {

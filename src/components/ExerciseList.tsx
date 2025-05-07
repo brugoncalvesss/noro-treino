@@ -8,11 +8,8 @@ interface Props {
 export default function ExerciseList({ exercises, onToggle }: Props) {
   return (
     <ul className="space-y-3">
-      {exercises.map((ex) => (
-        <li
-          key={ex.id}
-          className="flex items-center bg-white dark:bg-zinc-800 p-3 rounded shadow"
-        >
+      {exercises.map(ex => (
+        <li key={ex.id} className="flex items-center bg-white dark:bg-zinc-800 p-3 rounded shadow">
           <input
             type="checkbox"
             checked={ex.completed}
