@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import WorkoutPage from './pages/Workout';
 import Login from './pages/Login';
 import { useLocalStorage } from './hooks/useLocalStorage';
-import { useAuth } from './hooks/useAuth';
+import { useAuth } from './contexts/AuthContext';
 import { initialWorkouts } from './data/workouts';
 import { Workout } from './types';
 
