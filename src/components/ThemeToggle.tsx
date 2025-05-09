@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Sun, Moon } from 'phosphor-react';
 
 export function ThemeToggle() {
   const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'));
@@ -13,10 +14,12 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="bg-gray-200 dark:bg-gray-700 text-sm px-3 py-1 rounded transition-colors"
+      className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 text-sm px-3 py-1 rounded transition-colors"
       onClick={() => setDark(!dark)}
+      title={dark ? 'Modo Claro' : 'Modo Escuro'}
     >
-      {dark ? '☀️ Claro' : '🌙 Escuro'}
+      {dark ? <Sun size={18} weight="bold" /> : <Moon size={18} weight="bold" />}
+      {dark ? 'Claro' : 'Escuro'}
     </button>
   );
 }

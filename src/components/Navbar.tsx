@@ -1,6 +1,7 @@
 import { ThemeToggle } from './ThemeToggle';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { SignOut } from 'phosphor-react';
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -22,8 +23,9 @@ export default function Navbar() {
         {isAuthenticated && (
           <button
             onClick={handleLogout}
-            className="text-sm bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded transition-colors"
+            className="flex items-center gap-2 text-sm bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded transition-colors"
           >
+            <SignOut size={18} weight="bold" />
             Sair
           </button>
         )}

@@ -1,4 +1,5 @@
 import { Exercise } from '../types';
+import { CheckCircle, Circle } from 'phosphor-react';
 
 interface Props {
   exercises: Exercise[];
@@ -14,18 +15,25 @@ export default function ExerciseList({ exercises, onToggle }: Props) {
           className="flex items-start gap-3 bg-white dark:bg-zinc-800 p-4 rounded-xl shadow
                      transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-zinc-700"
         >
-          <input
-            type="checkbox"
-            checked={ex.completed}
-            onChange={() => onToggle(ex.id)}
-            className="w-6 h-6 mt-1 accent-blue-500"
-          />
+          <button
+            onClick={() => onToggle(ex.id)}
+            className="mt-1"
+            aria-label={ex.completed ? 'Desmarcar exercício' : 'Marcar exercício como concluído'}
+          >
+            {ex.completed ? (
+              <CheckCircle size={24} weight="bold" className="text-green-500" />
+            ) : (
+              <Circle size={24} weight="regular" className="text-gray-400" />
+            )}
+          </button>
+
           <span
             className={`flex-1 text-base sm:text-lg leading-snug ${
               ex.completed ? 'line-through text-gray-500' : 'text-gray-900 dark:text-gray-100'
             }`}
           >
-            {ex.name} <span className="block text-sm text-gray-500">{ex.sets}</span>
+            {ex.name}
+            <span className="block text-sm text-gray-500">{ex.sets}</span>
           </span>
         </li>
       ))}
